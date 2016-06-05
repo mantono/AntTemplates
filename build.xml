@@ -54,6 +54,17 @@
 	</javac>
 </target>
 
+<target name="debug" description="Compile code with debug options and run a debug session" depends="init">
+	<javac includeantruntime="true" srcdir="${src}" destdir="${build}" debug="on" debuglevel="lines,vars,source">
+		<classpath refid="project.class.path" />
+	</javac>
+	<java classname="${mainClass}" fork="true">
+		<jvmarg value="-Xdebug"/>
+		<jvmarg value="-agentlib:jdwp=transport=dt_socket,server=y,address=8000,suspend=y"/>
+		<classpath refid="project.class.path" />
+	</java>
+</target>
+
 <target name="run" description="Run program" depends="compile">
 	<java classname="${mainClass}">
 		<classpath refid="project.class.path" />		
