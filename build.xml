@@ -1,7 +1,7 @@
 <project name="**PROJECT-NAME**" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 
 <description>
-	Ant build file for project Duplicate Searcher
+	Project description
 </description>
 
 <property name="src" location="src"/>
