@@ -93,4 +93,8 @@
 <target name="deploy" description="Deploy code to server">
 </target>
 
+<target name="info" description="Info about this build script">
+	<echo>Classpath: ${toString:project.class.path}</echo>
+</target>
+
 </project>
