@@ -67,7 +67,8 @@
 
 <target name="run" description="Run program" depends="compile">
 	<java classname="${mainClass}">
-		<classpath refid="project.class.path" />		
+		<classpath refid="project.class.path" />
+		<arg line="${args}" />
 	</java>
 </target>
 
